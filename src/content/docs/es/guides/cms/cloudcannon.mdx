@@ -64,21 +64,21 @@ Si utilizas las [colecciones de contenido de Astro](/en/guides/content-collectio
 
 El panel de tu sitio en CloudCannon te permite organizar las páginas y el contenido de tu proyecto de Astro en colecciones: grupos de archivos relacionados con un formato similar. Esto te permite ver tipos de contenido similares juntos para facilitar la edición y hace que tus archivos de contenido sean fáciles de navegar, ordenar y filtrar.
 
-### Create a CloudCannon schema for a collection
+### Crear un esquema CloudCannon para una colección
 
-To ensure that the data properties of your CloudCannon entries match the Zod validation `schema` defined in your content collection, you can create a [CloudCannon schema](https://cloudcannon.com/documentation/articles/what-is-a-schema/) (a blank template document for creating a new entry). Creating a template schema can ensure that any new documents created in CloudCannon will have the properties required by your content collection and avoid type errors in your project. Your CloudCannon schema can also include default values to start new documents, such as an author name for a single-person blog.
+Para garantizar que las propiedades de datos de sus entradas de CloudCannon coincidan con el esquema de validación Zod (`schema`) definido en su colección de contenido, puede crear un [esquema de CloudCannon](https://cloudcannon.com/documentation/developer-articles/what-is-a-schema/) (una plantilla en blanco para crear una nueva entrada). Crear un esquema de plantilla garantiza que cualquier documento nuevo creado en CloudCannon tenga las propiedades requeridas por su colección de contenido y evita errores de tipo en su proyecto. Su esquema CloudCannon también puede incluir valores predeterminados para iniciar documentos nuevos, como el nombre del autor de un blog personal.
 
-The following example will create a CloudCannon schema based on an Astro content collection (`blog`) for blog posts written in Markdown. This schema will be available when [creating a new entry](#creating-a-new-entry) from the CloudCannon "Posts" collection:
+El siguiente ejemplo creará un esquema CloudCannon basado en una colección de contenido Astro (`blog`) para entradas de blog escritas en Markdown. Este esquema estará disponible al [crear una nueva entrada](#creating-a-new-entry) desde la colección «Entradas» de CloudCannon:
 
 <Steps>
 
-1. Create a folder at `.cloudcannon/schemas/` if it does not already exist.
-2. Add an existing blank file in this folder to be used as a default blog post template. The name is unimportant, but the file must have the same file extension as your Astro content collection entries (e.g. `post.md`).
-3. Provide the necessary frontmatter fields required by your content collection's schema. You do not need to provide any values for these, but any content you do include will be automatically included when a new entry is created. These are fields that will be available in the sidebar of your Content Editor.
+1. Cree una carpeta en `.cloudcannon/schemas/` si aún no existe.
+2. Agregue un archivo en blanco existente en esta carpeta para utilizarlo como plantilla predeterminada para las entradas del blog. El nombre no es importante, pero el archivo debe tener la misma extensión que las entradas de su colección de contenido Astro (por ejemplo, `entrada.md`).
+3. Proporcione los campos frontmatter necesarios que requiere el esquema de su colección de contenido. No es necesario que proporcione ningún valor para ellos, pero cualquier contenido que incluya se incluirá automáticamente cuando se cree una nueva entrada. Estos son campos que estarán disponibles en la barra lateral de su editor de contenido.
 
-      The following example schema for a blog post has placeholders for the title, author, and date:
+      El siguiente esquema de ejemplo para una entrada de blog tiene marcadores de posición para el título, el autor y la fecha:
 
-      ```markdown title=".cloudcannon/schemas/post.md"
+      ```markdown title=".cloudcannon/schemas/entrada.md"
       ---
       title:
       author:
@@ -87,18 +87,18 @@ The following example will create a CloudCannon schema based on an Astro content
       
       ```
 
-4. In your CloudCannon configuration file's `collections_config` property, add the file path to your schema under the CloudCannon collection under the "Posts" collection.
+4. En la propiedad `collections_config` de su archivo de configuración de CloudCannon, agregue la ruta del archivo a su esquema en la colección CloudCannon, dentro de la colección «Entradas».
 
       ```yml title="cloudcannon.config.yml" ins={6-9}
       collections_config:
         posts:
           path: content/blog
-          name: Posts
+          name: Entradas
           icon: post_add
           schemas:
             default:
-              path: .cloudcannon/schemas/post.md
-              name: Blog Post Entry
+              path: .cloudcannon/schemas/entrada.md
+              name: Entrada de Blog
       ```
 
 </Steps>
