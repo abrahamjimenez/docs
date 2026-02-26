@@ -103,43 +103,44 @@ El siguiente ejemplo creará un esquema CloudCannon basado en una colección de 
 
 </Steps>
 
-## Creating a new entry
+## Crear una nueva entrada
 
-In your CloudCannon Site Dashboard, you can create new content using the "Add" button. You will be able to select an entry type from the schemas you have defined in `cloudcannon.config.yml`, depending on which collection you are currently in.
+En el panel de control de tu sitio CloudCannon, puedes crear contenido nuevo utilizando el botón **Add** «Añadir». Podrás seleccionar un tipo de entrada de entre los esquemas que hayas definido en `cloudcannon.config.yml`, dependiendo de la colección en la que te encuentres actualmente.
 
-You can also upload files to CloudCannon, or create new files directly in your Astro project. When you save your Site changes, new files created in either location will be synchronized and available in both CloudCannon and your Astro project.
+También puede cargar archivos en CloudCannon o crear nuevos archivos directamente en su proyecto Astro. Cuando guarde los cambios del sitio, los nuevos archivos creados en cualquiera de las dos ubicaciones se sincronizarán y estarán disponibles tanto en CloudCannon como en su proyecto Astro.
 
-The following example will create a new blog post from the CloudCannon Site Dashboard "Posts" collection using the `post.md` template schema created to satisfy the `blog` Astro content collection:
+En el siguiente ejemplo se creará una nueva entrada de blog desde la colección «Entradas» del panel de control del sitio CloudCannon utilizando el esquema de plantilla `entrada.md` creado para satisfacer la colección de contenido `blog` de Astro:
 
 <Steps>
-1. In the CloudCannon Site Dashboard, navigate to the collection representing the kind of content you want to add. For example, navigate to the "Posts" collection to add a new blog post.
+1. En el panel de control del sitio CloudCannon, navega hasta la colección que representa el tipo de contenido que deseas agregar. Por ejemplo, navega hasta la colección «Entradas» para agregar una nueva entrada de blog.
 
-1. Use the "Add" button to create a new post. If you have configured CloudCannon's `post.md` schema, then you can choose the default blog post entry to create a new post.
+2. Utilice el botón **Add** «Añadir» para crear una nueva publicación. Si ha configurado el esquema `post.md` de CloudCannon, puede elegir la entrada predeterminada del blog para crear una nueva publicación.
 
-2. Fill in the necessary fields in the sidebar of your Content Editor (e.g. `title`, `author`, `date`), and post content and save your post.
+3. Rellene los campos necesarios en la barra lateral de su editor de contenido (por ejemplo, `title`, `author`, `date`), publique el contenido y guarde su publicación.
 
-3. This post is saved locally in CloudCannon and should now be visible from your Site Dashboard in your "Posts" collection. You can view and edit all your individual posts from this dashboard page.
+4. Esta publicación se guarda localmente en CloudCannon y ahora debería estar visible desde el panel de control de su sitio en su colección «Entradas». Puede ver y editar todas sus publicaciones individuales desde esta página del panel de control.
 
-4. When you are ready to commit this new post back to your Astro repository, select "Save" in the Site navigation sidebar from your Site Dashboard. This will show you all unsaved changes made to your site since your last commit back to your repository and allow you to review and select which ones to save or discard.
+5. Cuando esté listo para enviar esta nueva entrada a su repositorio Astro, seleccione **Save** «Guardar» en la barra lateral de navegación del sitio desde el panel de control del sitio. Esto le mostrará todos los cambios no guardados que se han realizado en su sitio desde la última vez que envió cambios a su repositorio y le permitirá revisar y seleccionar cuáles desea guardar o descartar.
 
-5. Return to view your Astro project files and pull new changes from git. You will now find a new `.md` file inside the specified directory for this new post, for example:
+6. Vuelve a ver los archivos de tu proyecto Astro y obtén los nuevos cambios de git. Ahora encontrarás un nuevo archivo `.md` dentro del directorio especificado para esta nueva publicación, por ejemplo:
     <FileTree title="Project Structure">
     - src/
       - content/
         - blog/
-          - **my-new-post.md**
+          - **mi-nueva-entrada.md**
     </FileTree>
 
-6. Navigate to that file in your code editor and verify that you can see the Markdown content you entered. For example:
+7. Navega hasta ese archivo en tu editor de código y verifica que puedes ver el contenido Markdown que has introducido. Por ejemplo:
 
       ```markdown
       ---
-      title: My New Post
+      title: Mi Nueva Entrada
       author: Sarah
       date: 2025-11-12
       ---
       
-      This is my very first post created in CloudCannon. I am **super** excited!
+      Esta es mi primera publicación creada en CloudCannon. ¡Estoy **muy** emocionada!
+
       ```
 
 </Steps>
