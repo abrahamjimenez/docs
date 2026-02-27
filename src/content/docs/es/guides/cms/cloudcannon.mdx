@@ -197,16 +197,16 @@ Para obtener más información sobre cómo consultar, filtrar y mostrar el conte
 
 Para implementar su sitio web, visite nuestras [guías de implementación](/es/guides/deploy/) y siga las instrucciones correspondientes a su proveedor de alojamiento preferido.
 
-## Configure Visual Editing
+## Configurar la edición visual
 
-CloudCannon's [Visual Editor](https://cloudcannon.com/documentation/articles/the-visual-editor/) allows you to see and edit text, images, and other content in a live, interactive preview of your site. These updates can be made using editable regions, data panels, and the sidebar.
+El [Editor visual](https://cloudcannon.com/documentation/articles/the-visual-editor/) de CloudCannon le permite ver y editar texto, imágenes y otros contenidos en una vista previa interactiva y en tiempo real de su sitio web. Estas actualizaciones se pueden realizar utilizando regiones editables, paneles de datos y la barra lateral.
 
-Follow [CloudCannon's guide to set up visual editing](https://cloudcannon.com/documentation/guides/set-up-visual-editing/) (also available in your Site Dashboard). This will show you how to define [editable regions](https://cloudcannon.com/documentation/guides/set-up-visual-editing/an-overview-of-editable-regions/) of your live preview by setting HTML `data-` attributes on DOM elements, or by inserting web components.
+Siga la [guía de CloudCannon para configurar la edición visual](https://cloudcannon.com/documentation/guides/set-up-visual-editing/) (también disponible en el panel de control de su sitio). Esto le mostrará cómo definir [regiones editables](https://cloudcannon.com/documentation/guides/set-up-visual-editing/an-overview-of-editable-regions/) de su vista previa en vivo estableciendo atributos HTML `data-` en elementos DOM o insertando componentes web.
 
-For example, the following template creates an editable `author` value that can be updated in the live preview:
+Por ejemplo, la siguiente plantilla crea un valor `author` editable que se puede actualizar en la vista previa en vivo:
 
 ```html
-<p>By: <editable-text data-prop="author">{author}</editable-text></p>
+<p>Por: <editable-text data-prop="author">{author}</editable-text></p>
 ```
 
 ### Visual Editing with components
