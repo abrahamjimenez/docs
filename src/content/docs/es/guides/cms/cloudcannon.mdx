@@ -145,13 +145,14 @@ En el siguiente ejemplo se creará una nueva entrada de blog desde la colección
 
 </Steps>
 
-## Rendering CloudCannon content
 
-Use Astro's Content Collections API to [query and display your posts and collections](/en/guides/content-collections/#querying-build-time-collections), just as you would in any Astro project.
+## Renderización de contenido de CloudCannon
 
-### Displaying a collection list
+Utilice la API de colecciones de contenido de Astro para [consultar y mostrar sus publicaciones y colecciones](/es/guides/content-collections/#querying-build-time-collections), tal y como lo haría en cualquier proyecto de Astro.
 
-The following example displays a list of each post title, with a link to an individual post page.
+### Mostrar una lista de colecciones
+
+El siguiente ejemplo muestra una lista con el título de cada entrada, con un enlace a la página de cada entrada individual.
 
 ```astro title="src/pages/blog.astro" {4}
 ---
@@ -168,27 +169,27 @@ const posts = await getCollection('blog');
 </ul>
 ```
 
-### Displaying a single entry
+### Mostrar una sola entrada
 
-To display content from an individual post, you can import and use the `<Content />` component to [render your content to HTML](/en/guides/content-collections/#rendering-body-content):
+Para mostrar el contenido de una entrada individual, puede importar y utilizar el componente `<Content />` para [representar su contenido en HTML](/es/guides/content-collections/#rendering-body-content):
 
 ```astro title="src/pages/blog/my-first-post.astro" {4-5}
 ---
 import { getEntry, render } from 'astro:content';
 
-const entry = await getEntry('blog', 'my-first-post');
+const entry = await getEntry('blog', 'mi-primer-entrada');
 const { Content } = await render(entry);
 ---
 
 <main>
   <h1>{entry.data.title}</h1>
-  <p>By: {entry.data.author}</p>
+  <p>Por: {entry.data.author}</p>
   <Content />
 </main>
 
 ```
 
-For more information on querying, filtering, displaying your collections content, and more, see the full content [collections documentation](/en/guides/content-collections/).
+Para obtener más información sobre cómo consultar, filtrar y mostrar el contenido de tus colecciones, entre otras cosas, consulta el contenido completo de la [documentación sobre colecciones](/es/guides/content-collections/).
 
 ## Deploying CloudCannon + Astro
 
