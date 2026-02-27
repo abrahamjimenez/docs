@@ -209,12 +209,12 @@ Por ejemplo, la siguiente plantilla crea un valor `author` editable que se puede
 <p>Por: <editable-text data-prop="author">{author}</editable-text></p>
 ```
 
-### Visual Editing with components
+### Edición visual con componentes
 
-CloudCannon allows you to [define Component Editable Regions](https://cloudcannon.com/documentation/guides/set-up-visual-editing/visual-editing-for-components/) for live re-rendering of Astro components in the Visual Editor. This gives you the same interactive editing experience for your Astro components.
+CloudCannon te permite [definir regiones editables de componentes](https://cloudcannon.com/documentation/guides/set-up-visual-editing/visual-editing-for-components/) para volver a renderizar en vivo los componentes Astro en el editor visual. Esto te brinda la misma experiencia de edición interactiva para tus componentes Astro.
 
 <Steps>
-1. Install the [`@cloudcannon/editable-regions`](https://github.com/CloudCannon/editable-regions) package.
+1. Instala el paquete [`@cloudcannon/editable-regions`](https://github.com/CloudCannon/editable-regions).
 
     <PackageManagerTabs>
       <Fragment slot="npm">
@@ -234,7 +234,7 @@ CloudCannon allows you to [define Component Editable Regions](https://cloudcanno
       </Fragment>
     </PackageManagerTabs>
 
-2. Add the `editableRegions` integration to your Astro config:
+2. Agregue la integración `editableRegions` a su configuración de Astro:
 
     ```js title="astro.config.mjs" ins={2} ins="editableRegions()"
     import { defineConfig } from 'astro/config';
@@ -247,9 +247,9 @@ CloudCannon allows you to [define Component Editable Regions](https://cloudcanno
     });
     ```
 
-3. Follow [CloudCannon's instructions to register your components](https://cloudcannon.com/documentation/guides/set-up-visual-editing/visual-editing-for-components/#register-your-components). This tells CloudCannon that those components should be bundled for client-side use in the Visual Editor.
+3. Siga las [instrucciones de CloudCannon para registrar sus componentes](https://cloudcannon.com/documentation/guides/set-up-visual-editing/visual-editing-for-components/#register-your-components). Esto le indica a CloudCannon que esos componentes deben agruparse para su uso por parte del cliente en el Editor Visual.
 
-1. Add the appropriate attributes to your components for visual editing. For example, the following `CTA.astro` component properties, such as description and button color, can be updated in CloudCannon's Visual Editor:
+4. Agregue los atributos adecuados a sus componentes para la edición visual. Por ejemplo, las siguientes propiedades del componente `CTA.astro`, como la descripción y el color del botón, se pueden actualizar en el editor visual de CloudCannon:
 
     ```astro title="src/components/CTA.astro"
     ---
