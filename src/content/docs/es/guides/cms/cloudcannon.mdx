@@ -17,7 +17,7 @@ import PackageManagerTabs from '~/components/tabs/PackageManagerTabs.astro';
 [CloudCannon](https://cloudcannon.com) es un sistema de gestión de contenido (CMS) sin cabeza basado en Git que proporciona un editor visual para tu contenido y componentes de UI, ofreciendo una experiencia de edición rica y en vivo.
 
 :::tip
-Si estás empezando un proyecto desde cero, puedes utilizar la plantilla [CloudCannon Astro Sendit](https://cloudcannon.com/templates/sendit/?ssg=astro) con las funciones más utilizadas de CloudCannon para reducir el tiempo de configuración.
+Si estás empezando un proyecto desde cero, puedes utilizar la [plantilla CloudCannon Astro Sendit](https://cloudcannon.com/templates/sendit/?ssg=astro) con las funciones más utilizadas de CloudCannon para reducir el tiempo de configuración.
 :::
 
 ## Integración con Astro
@@ -28,9 +28,9 @@ El Panel de Control del Sitio te ofrece una vista organizada de tus archivos Ast
 
 - Un [Editor de datos](https://cloudcannon.com/documentation/articles/the-data-editor/) para gestionar archivos de datos y marcado.
 - Un [Editor de contenidos](https://cloudcannon.com/documentation/articles/the-content-editor/) para la edición de texto enriquecido WYSIWYG en una vista mínima.
-- Un [Editor visual](https://cloudcannon.com/documentation/articles/the-visual-editor/) para una vista previa interactiva de su sitio, que le permite editar directamente en la página.
+- Un [Editor visual](https://cloudcannon.com/documentation/articles/the-visual-editor/) para una vista previa interactiva de tu sitio, que te permite editar directamente en la página.
 
-También puede configurar el acceso basado en roles a un [editor de código fuente](https://cloudcannon.com/documentation/articles/the-source-editor/) mínimo, un editor de código integrado en el navegador para realizar pequeños cambios en el código fuente de sus archivos.
+También puedes configurar el acceso basado en roles a un [editor de código fuente](https://cloudcannon.com/documentation/articles/the-source-editor/) mínimo, un editor de código integrado en el navegador para realizar pequeños cambios en el código fuente de tus archivos.
 
 ## Requisitos Previos
 
@@ -52,11 +52,11 @@ Los siguientes pasos configurarán un nuevo sitio de CloudCannon desde tu panel 
 
 </Steps>
 
-Ahora puedes explorar el panel de control de su sitio para ver los archivos de contenido de su sitio Astro y editarlos con el [Editor de contenido](https://cloudcannon.com/documentation/articles/what-is-the-content-editor/) (por ejemplo, `.md`, `.mdx`), el [Editor de datos](https://cloudcannon.com/documentation/articles/what-is-the-data-editor/) (por ejemplo, `.yml`, `.json`) y el [Editor visual](https://cloudcannon.com/documentation/articles/what-is-the-visual-editor/) (por ejemplo, `.astro`), según corresponda.
+Ahora puedes explorar el panel de control de tu sitio para ver los archivos de contenido de tu sitio Astro y editarlos con el [Editor de contenido](https://cloudcannon.com/documentation/articles/what-is-the-content-editor/) (por ejemplo, `.md`, `.mdx`), el [Editor de datos](https://cloudcannon.com/documentation/articles/what-is-the-data-editor/) (por ejemplo, `.yml`, `.json`) y el [Editor visual](https://cloudcannon.com/documentation/articles/what-is-the-visual-editor/) (por ejemplo, `.astro`), según corresponda.
 
 También puedes aprovechar algunas funciones de CloudCannon, como [organizar tus archivos en colecciones](#cloudcannon-collections-and-schemas), [crear esquemas de CloudCannon](#create-a-cloudcannon-schema-for-a-collection) y configurar tu proyecto para la [edición visual](#configure-visual-editing).
 
-Para obtener instrucciones más detalladas, consulta la [guía Getting Started de CloudCannon](https://cloudcannon.com/documentation/guides/getting-started-with-cloudcannon/).
+Para obtener instrucciones más detalladas, consulta la [guía Introducción a CloudCannon](https://cloudcannon.com/documentation/guides/getting-started-with-cloudcannon/).
 
 ## Colecciones y esquemas de CloudCannon
 
@@ -66,15 +66,15 @@ El panel de tu sitio en CloudCannon te permite organizar las páginas y el conte
 
 ### Crear un esquema CloudCannon para una colección
 
-Para garantizar que las propiedades de datos de sus entradas de CloudCannon coincidan con el esquema de validación Zod (`schema`) definido en su colección de contenido, puede crear un [esquema de CloudCannon](https://cloudcannon.com/documentation/developer-articles/what-is-a-schema/) (una plantilla en blanco para crear una nueva entrada). Crear un esquema de plantilla garantiza que cualquier documento nuevo creado en CloudCannon tenga las propiedades requeridas por su colección de contenido y evita errores de tipo en su proyecto. Su esquema CloudCannon también puede incluir valores predeterminados para iniciar documentos nuevos, como el nombre del autor de un blog personal.
+Para garantizar que las propiedades de datos de tus entradas de CloudCannon coincidan con el esquema de validación Zod (`schema`) definido en tu colección de contenido, puedes crear un [esquema de CloudCannon](https://cloudcannon.com/documentation/developer-articles/what-is-a-schema/) (una plantilla en blanco para crear una nueva entrada). Crear un esquema de plantilla garantiza que cualquier documento nuevo creado en CloudCannon tenga las propiedades requeridas por tu colección de contenido y evita errores de tipo en tu proyecto. Tu esquema CloudCannon también puede incluir valores predeterminados para iniciar documentos nuevos, como el nombre del autor de un blog personal.
 
 El siguiente ejemplo creará un esquema CloudCannon basado en una colección de contenido Astro (`blog`) para entradas de blog escritas en Markdown. Este esquema estará disponible al [crear una nueva entrada](#creating-a-new-entry) desde la colección «Entradas» de CloudCannon:
 
 <Steps>
 
-1. Cree una carpeta en `.cloudcannon/schemas/` si aún no existe.
-2. Agregue un archivo en blanco existente en esta carpeta para utilizarlo como plantilla predeterminada para las entradas del blog. El nombre no es importante, pero el archivo debe tener la misma extensión que las entradas de su colección de contenido Astro (por ejemplo, `entrada.md`).
-3. Proporcione los campos frontmatter necesarios que requiere el esquema de su colección de contenido. No es necesario que proporcione ningún valor para ellos, pero cualquier contenido que incluya se incluirá automáticamente cuando se cree una nueva entrada. Estos son campos que estarán disponibles en la barra lateral de su editor de contenido.
+1. Crea una carpeta en `.cloudcannon/schemas/` si aún no existe.
+2. Agrega un archivo en blanco existente en esta carpeta para utilizarlo como plantilla predeterminada para las entradas del blog. El nombre no es importante, pero el archivo debe tener la misma extensión que las entradas de tu colección de contenido Astro (por ejemplo, `entrada.md`).
+3. Proporciona los campos frontmatter necesarios que requiere el esquema de tu colección de contenido. No es necesario que proporciones ningún valor para ellos, pero cualquier contenido que incluya se incluirá automáticamente cuando se cree una nueva entrada. Estos son campos que estarán disponibles en la barra lateral de tu editor de contenido.
 
       El siguiente esquema de ejemplo para una entrada de blog tiene marcadores de posición para el título, el autor y la fecha:
 
@@ -87,7 +87,7 @@ El siguiente ejemplo creará un esquema CloudCannon basado en una colección de 
       
       ```
 
-4. En la propiedad `collections_config` de su archivo de configuración de CloudCannon, agregue la ruta del archivo a su esquema en la colección CloudCannon, dentro de la colección «Entradas».
+4. En la propiedad `collections_config` de tu archivo de configuración de CloudCannon, agrega la ruta del archivo a tu esquema en la colección CloudCannon, dentro de la colección «Entradas».
 
       ```yml title="cloudcannon.config.yml" ins={6-9}
       collections_config:
@@ -107,20 +107,20 @@ El siguiente ejemplo creará un esquema CloudCannon basado en una colección de 
 
 En el panel de control de tu sitio CloudCannon, puedes crear contenido nuevo utilizando el botón **Add** «Añadir». Podrás seleccionar un tipo de entrada de entre los esquemas que hayas definido en `cloudcannon.config.yml`, dependiendo de la colección en la que te encuentres actualmente.
 
-También puede cargar archivos en CloudCannon o crear nuevos archivos directamente en su proyecto Astro. Cuando guarde los cambios del sitio, los nuevos archivos creados en cualquiera de las dos ubicaciones se sincronizarán y estarán disponibles tanto en CloudCannon como en su proyecto Astro.
+También puedes cargar archivos en CloudCannon o crear nuevos archivos directamente en tu proyecto Astro. Cuando guarde los cambios del sitio, los nuevos archivos creados en cualquiera de las dos ubicaciones se sincronizarán y estarán disponibles tanto en CloudCannon como en tu proyecto Astro.
 
 En el siguiente ejemplo se creará una nueva entrada de blog desde la colección «Entradas» del panel de control del sitio CloudCannon utilizando el esquema de plantilla `entrada.md` creado para satisfacer la colección de contenido `blog` de Astro:
 
 <Steps>
 1. En el panel de control del sitio CloudCannon, navega hasta la colección que representa el tipo de contenido que deseas agregar. Por ejemplo, navega hasta la colección «Entradas» para agregar una nueva entrada de blog.
 
-2. Utilice el botón **Add** «Añadir» para crear una nueva publicación. Si ha configurado el esquema `post.md` de CloudCannon, puede elegir la entrada predeterminada del blog para crear una nueva publicación.
+2. Utiliza el botón **Add** «Añadir» para crear una nueva publicación. Si has configurado el esquema `post.md` de CloudCannon, puedes elegir la entrada predeterminada del blog para crear una nueva publicación.
 
-3. Rellene los campos necesarios en la barra lateral de su editor de contenido (por ejemplo, `title`, `author`, `date`), publique el contenido y guarde su publicación.
+3. Rellena los campos necesarios en la barra lateral de tu editor de contenido (por ejemplo, `title`, `author`, `date`), publique el contenido y guarde tu publicación.
 
-4. Esta publicación se guarda localmente en CloudCannon y ahora debería estar visible desde el panel de control de su sitio en su colección «Entradas». Puede ver y editar todas sus publicaciones individuales desde esta página del panel de control.
+4. Esta publicación se guarda localmente en CloudCannon y ahora debería estar visible desde el panel de control de tu sitio en tu colección «Entradas». Puedes ver y editar todas tus publicaciones individuales desde esta página del panel de control.
 
-5. Cuando esté listo para enviar esta nueva entrada a su repositorio Astro, seleccione **Save** «Guardar» en la barra lateral de navegación del sitio desde el panel de control del sitio. Esto le mostrará todos los cambios no guardados que se han realizado en su sitio desde la última vez que envió cambios a su repositorio y le permitirá revisar y seleccionar cuáles desea guardar o descartar.
+5. Cuando estés listo para enviar esta nueva entrada a tu repositorio Astro, selecciona **Save** «Guardar» en la barra lateral de navegación del sitio desde el panel de control del sitio. Esto te mostrará todos los cambios no guardados que se han realizado en tu sitio desde la última vez que enviaste cambios a tu repositorio y te permitirá revisar y seleccionar cuáles desea guardar o descartar.
 
 6. Vuelve a ver los archivos de tu proyecto Astro y obtén los nuevos cambios de git. Ahora encontrarás un nuevo archivo `.md` dentro del directorio especificado para esta nueva publicación, por ejemplo:
     <FileTree title="Project Structure">
@@ -148,7 +148,7 @@ En el siguiente ejemplo se creará una nueva entrada de blog desde la colección
 
 ## Renderización de contenido de CloudCannon
 
-Utilice la API de colecciones de contenido de Astro para [consultar y mostrar sus publicaciones y colecciones](/es/guides/content-collections/#querying-build-time-collections), tal y como lo haría en cualquier proyecto de Astro.
+Utiliza la API de colecciones de contenido de Astro para [consultar y mostrar tus publicaciones y colecciones](/es/guides/content-collections/#querying-build-time-collections), tal y como lo haría en cualquier proyecto de Astro.
 
 ### Mostrar una lista de colecciones
 
@@ -171,7 +171,7 @@ const posts = await getCollection('blog');
 
 ### Mostrar una sola entrada
 
-Para mostrar el contenido de una entrada individual, puede importar y utilizar el componente `<Content />` para [representar su contenido en HTML](/es/guides/content-collections/#rendering-body-content):
+Para mostrar el contenido de una entrada individual, puedes importar y utilizar el componente `<Content />` para [representar tu contenido en HTML](/es/guides/content-collections/#rendering-body-content):
 
 ```astro title="src/pages/blog/my-first-post.astro" {4-5}
 ---
@@ -193,15 +193,15 @@ Para obtener más información sobre cómo consultar, filtrar y mostrar el conte
 
 ## Implementación de CloudCannon + Astro
 
-[CloudCannon ofrece alojamiento web gratuito](https://cloudcannon.com/documentation/articles/what-is-web-hosting/) como parte de todos sus planes, que utilizan Cloudflare en segundo plano. Sin embargo, puede alojar su sitio web con casi cualquier proveedor de alojamiento que pueda implementar desde un repositorio Git.
+[CloudCannon ofrece alojamiento web gratuito](https://cloudcannon.com/documentation/articles/what-is-web-hosting/) como parte de todos tus planes, que utilizan Cloudflare en segundo plano. Sin embargo, puedes alojar tu sitio web con casi cualquier proveedor de alojamiento que pueda implementar desde un repositorio Git.
 
-Para implementar su sitio web, visite nuestras [guías de implementación](/es/guides/deploy/) y siga las instrucciones correspondientes a su proveedor de alojamiento preferido.
+Para implementar tu sitio web, visita nuestras [guías de implementación](/es/guides/deploy/) y sigue las instrucciones correspondientes a tu proveedor de alojamiento preferido.
 
 ## Configurar la edición visual
 
-El [Editor visual](https://cloudcannon.com/documentation/articles/the-visual-editor/) de CloudCannon le permite ver y editar texto, imágenes y otros contenidos en una vista previa interactiva y en tiempo real de su sitio web. Estas actualizaciones se pueden realizar utilizando regiones editables, paneles de datos y la barra lateral.
+El [Editor visual](https://cloudcannon.com/documentation/articles/the-visual-editor/) de CloudCannon te permite ver y editar texto, imágenes y otros contenidos en una vista previa interactiva y en tiempo real de tu sitio web. Estas actualizaciones se pueden realizar utilizando regiones editables, paneles de datos y la barra lateral.
 
-Siga la [guía de CloudCannon para configurar la edición visual](https://cloudcannon.com/documentation/guides/set-up-visual-editing/) (también disponible en el panel de control de su sitio). Esto le mostrará cómo definir [regiones editables](https://cloudcannon.com/documentation/guides/set-up-visual-editing/an-overview-of-editable-regions/) de su vista previa en vivo estableciendo atributos HTML `data-` en elementos DOM o insertando componentes web.
+Sigue la [guía de CloudCannon para configurar la edición visual](https://cloudcannon.com/documentation/guides/set-up-visual-editing/) (también disponible en el panel de control de tu sitio). Esto te mostrará cómo definir [regiones editables](https://cloudcannon.com/documentation/guides/set-up-visual-editing/an-overview-of-editable-regions/) de tu vista previa en vivo estableciendo atributos HTML `data-` en elementos DOM o insertando componentes web.
 
 Por ejemplo, la siguiente plantilla crea un valor `author` editable que se puede actualizar en la vista previa en vivo:
 
@@ -234,7 +234,7 @@ CloudCannon te permite [definir regiones editables de componentes](https://cloud
       </Fragment>
     </PackageManagerTabs>
 
-2. Agregue la integración `editableRegions` a su configuración de Astro:
+2. Agregue la integración `editableRegions` a tu configuración de Astro:
 
     ```js title="astro.config.mjs" ins={2} ins="editableRegions()"
     import { defineConfig } from 'astro/config';
@@ -247,9 +247,9 @@ CloudCannon te permite [definir regiones editables de componentes](https://cloud
     });
     ```
 
-3. Siga las [instrucciones de CloudCannon para registrar sus componentes](https://cloudcannon.com/documentation/guides/set-up-visual-editing/visual-editing-for-components/#register-your-components). Esto le indica a CloudCannon que esos componentes deben agruparse para su uso por parte del cliente en el Editor Visual.
+3. Sigue las [instrucciones de CloudCannon para registrar tus componentes](https://cloudcannon.com/documentation/guides/set-up-visual-editing/visual-editing-for-components/#register-your-components). Esto le indica a CloudCannon que esos componentes deben agruparse para tu uso por parte del cliente en el Editor Visual.
 
-4. Agregue los atributos adecuados a sus componentes para la edición visual. Por ejemplo, las siguientes propiedades del componente `CTA.astro`, como la descripción y el color del botón, se pueden actualizar en el editor visual de CloudCannon:
+4. Agregue los atributos adecuados a tus componentes para la edición visual. Por ejemplo, las siguientes propiedades del componente `CTA.astro`, como la descripción y el color del botón, se pueden actualizar en el editor visual de CloudCannon:
 
     ```astro title="src/components/CTA.astro"
     ---
@@ -265,7 +265,7 @@ CloudCannon te permite [definir regiones editables de componentes](https://cloud
 
 </Steps>
 
-## Official Resources
+## Recursos oficiales
 
 - [CloudCannon: The Astro CMS](https://cloudcannon.com/astro-cms/)
 - [Astro Sendit Template](https://cloudcannon.com/templates/sendit/?ssg=astro)
